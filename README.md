@@ -4,7 +4,7 @@
 Questo progetto si concentra sull'allineamento tra domande in linguaggio naturale e tabelle di database SQL, verificando la capacità di un LLM di individuare correttamente le tabelle pertinenti. L'analisi viene condotta confrontando le predizioni del modello con le tabelle reali estratte dalle query SQL. Per maggiori informazioni è presente il file ...
 
 ## Dataset
-Il dataset utilizzato è **BIRD-benchmark (Mini-Dev)**, che contiene 500 coppie di query SQL e domande in linguaggio naturale.
+Il dataset utilizzato è **BIRD-benchmark (Mini-Dev)**, che contiene 500 coppie di query SQL e domande in linguaggio naturale. [here](https://github.com/bird-bench/mini_dev)
 
 ## Struttura del progetto
 - **scripts/**: Contiene gli script principali per l'estrazione delle tabelle e il calcolo delle metriche.
@@ -28,17 +28,21 @@ Il dataset utilizzato è **BIRD-benchmark (Mini-Dev)**, che contiene 500 coppie 
    python scripts/metrics.py
 
 ## Risultati
-Le tabelle estratte dalle query SQL sono salvate in:
+Le tabelle estratte dalle **query SQL** sono salvate in:
 
     results/tables_extracted/output_sql.json
 
-Le predizioni dell'LLM sono salvate in:
+Le predizioni dell'**LLM** sono salvate in:
 
     results/tables_extracted/output_llm.json
 
-Le metriche di valutazione (Precision, Recall, F1-score) sono disponibili in:
+Le metriche di valutazione globali **(Precision, Recall, F1-score)** sono disponibili in:
 
     results/metrics/evaluation_results.json
+
+Le metriche di valutazione **(Precision, Recall, F1-score)** per ogni **singolo db** sono disponibili in:
+
+    results/metrics/f1_per_db.json
 
 Il confronto tra metriche calcolate manualmente e quelle dell'LLM è in:
 

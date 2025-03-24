@@ -18,8 +18,10 @@ Il dataset utilizzato è **BIRD-benchmark (Mini-Dev)**, che contiene 500 coppie 
   - **metrics/**: Contiene i file JSON con i risultati delle metriche di valutazione e i grafici generati.
 
 ## Installazione
-1. mkdir /Documents/advanced
-2. Clonare il repository nella cartella advanced:
+1. Creare una cartella advanced:
+   mkdir /Documents/advanced
+   cd Documents/advanced
+3. Clonare il repository:
    ```bash
    git clone https://github.com/DanieleFerneti/bird_schema_alignment.git
    cd bird_schema_alignment

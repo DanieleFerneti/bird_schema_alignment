@@ -27,8 +27,10 @@ Il dataset utilizzato è **BIRD-benchmark (Mini-Dev)**, che contiene 500 coppie 
    git clone https://github.com/DanieleFerneti/bird_schema_alignment.git
    cd bird_schema_alignment
 3. Scaricare il dataset:
+   
      andare [here](https://github.com/bird-bench/mini_dev), eseguire il download e copiare la cartella dentro /Documents/advanced/bird_schema_alignment
-4. Prima di iniziare devi avere
+   
+5. Prima di iniziare devi avere
      ```bash
      cd /Documents/advanced/bird_schema_alignment/mini_dev
      cd /Documents/advanced/bird_schema_alignment/scripts

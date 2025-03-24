@@ -26,17 +26,24 @@ Il dataset utilizzato è **BIRD-benchmark (Mini-Dev)**, che contiene 500 coppie 
    ```bash
    git clone https://github.com/DanieleFerneti/bird_schema_alignment.git
    cd bird_schema_alignment
+3. Scaricare il dataset:
+     andare [here](https://github.com/bird-bench/mini_dev), eseguire il download e copiare la cartella dentro /Documents/advanced/bird_schema_alignment
+4. Prima di iniziare devi avere
+     ```bash
+     cd /Documents/advanced/bird_schema_alignment/mini_dev
+     cd /Documents/advanced/bird_schema_alignment/scripts
+     cd /Documents/advanced/bird_schema_alignment/results
+     
 
 ## Utilizzo
 1. Estrarre le tabelle reali con espressioni regolari e predire le tabelle con il LLM:
    
        python3 scripts/ask_tables.py
    
-3. Calcolare le metriche di valutazione:
+2. Calcolare le metriche di valutazione:
    
        python3 scripts/metrics.py
    
-
 ## Risultati
 Le tabelle estratte dalle **query SQL** sono salvate in:
 

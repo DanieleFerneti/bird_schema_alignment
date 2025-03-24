@@ -1,4 +1,4 @@
-# bird_schema_alignment
+# BIRD benchmark schema alignment
 
 ## Descrizione
 Questo progetto si concentra sull'allineamento tra domande in linguaggio naturale e tabelle di database SQL, verificando la capacità di un LLM di individuare correttamente le tabelle pertinenti. L'analisi viene condotta confrontando le predizioni del modello con le tabelle reali estratte dalle query SQL. Per maggiori informazioni è presente il file ...

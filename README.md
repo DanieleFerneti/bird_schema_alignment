@@ -59,5 +59,5 @@ Un grafico delle F1-score per database è salvato in:
 
     results/metrics/f1_final_comparison.png
 
-Autore
-Daniele Ferneti
+## Autore
+- Daniele Ferneti

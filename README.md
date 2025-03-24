@@ -3,6 +3,9 @@
 ## Descrizione
 Questo progetto si concentra sull'allineamento tra domande in linguaggio naturale e tabelle di database SQL, verificando la capacità di un LLM di individuare correttamente le tabelle pertinenti. L'analisi viene condotta confrontando le predizioni del modello con le tabelle reali estratte dalle query SQL. Per maggiori informazioni è presente il file ...
 
+## General info
+- **Modello**: Utilizzata l'API gratuita di Groq con il modello LLaMA 3-70B-8192.
+
 ## Dataset
 Il dataset utilizzato è **BIRD-benchmark (Mini-Dev)**, che contiene 500 coppie di query SQL e domande in linguaggio naturale. [here](https://github.com/bird-bench/mini_dev)
 

@@ -22,7 +22,7 @@ Il dataset utilizzato è **BIRD-benchmark (Mini-Dev)**, che contiene 500 coppie 
     ```bash
    mkdir /Documents/advanced
    cd /Documents/advanced
-2. Clonare il repository:
+2. Clonare la repository:
    ```bash
    git clone https://github.com/DanieleFerneti/bird_schema_alignment.git
    cd bird_schema_alignment

@@ -23,9 +23,9 @@ Il dataset utilizzato è **BIRD-benchmark (Mini-Dev)**, che contiene 500 coppie 
 
 ## Utilizzo
 1. Estrarre le tabelle reali con espressioni regolari e predire le tabelle con il LLM:
-     python scripts/ask_tables.py
+       python3 scripts/ask_tables.py
 2. Calcolare le metriche di valutazione:
-     python scripts/metrics.py
+       python3 scripts/metrics.py
 
 ## Risultati
 Le tabelle estratte dalle **query SQL** sono salvate in:

@@ -1,7 +1,7 @@
 # BIRD benchmark schema alignment
 
 ## Descrizione
-Questo progetto si concentra sull'allineamento tra domande in linguaggio naturale e tabelle di database SQL, verificando la capacità di un LLM di individuare correttamente le tabelle pertinenti. L'analisi viene condotta confrontando le predizioni del modello con le tabelle reali estratte dalle query SQL. L'obiettivo è stato risolvere l'assignment assegnato [**assignment.pdf**]. Per maggiori informazioni consultare il file [...]
+Questo progetto si concentra sull'allineamento tra domande in linguaggio naturale e tabelle di database SQL, verificando la capacità di un LLM di individuare correttamente le tabelle pertinenti. L'analisi viene condotta confrontando le predizioni del modello con le tabelle reali estratte dalle query SQL. L'obiettivo è stato risolvere l'assignment assegnato [**Assignment.pdf**]. Per maggiori informazioni consultare il file [...]
 
 ## General info
 - **Modello**: Utilizzata l'API gratuita di Groq con il modello LLaMA 3-70B-8192.

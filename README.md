@@ -19,9 +19,10 @@ Il dataset utilizzato è **BIRD-benchmark (Mini-Dev)**, che contiene 500 coppie 
 
 ## Installazione
 1. Creare una cartella advanced:
+    ```bash
    mkdir /Documents/advanced
    cd Documents/advanced
-3. Clonare il repository:
+2. Clonare il repository:
    ```bash
    git clone https://github.com/DanieleFerneti/bird_schema_alignment.git
    cd bird_schema_alignment

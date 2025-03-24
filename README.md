@@ -30,19 +30,19 @@ Il dataset utilizzato è **BIRD-benchmark (Mini-Dev)**, che contiene 500 coppie 
 ## Risultati
 Le tabelle estratte dalle query SQL sono salvate in:
 
-results/tables_extracted/output_sql.json
+    results/tables_extracted/output_sql.json
 
 Le predizioni dell'LLM sono salvate in:
 
-results/tables_extracted/output_llm.json
+    results/tables_extracted/output_llm.json
 
 Le metriche di valutazione (Precision, Recall, F1-score) sono disponibili in:
 
-results/metrics/evaluation_results.json
+    results/metrics/evaluation_results.json
 
 Il confronto tra metriche calcolate manualmente e quelle dell'LLM è in:
 
-results/metrics/llm_evaluation_results.json
+    results/metrics/llm_evaluation_results.json
 
 Un grafico delle F1-score per database è salvato in:
 

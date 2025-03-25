@@ -3,6 +3,7 @@ import json
 import requests
 import time
 from typing import List
+from pathlib import Path
 
 HOME_DIR = Path.home()
 PATH = HOME_DIR / "Documents/advanced/bird_schema_alignment"

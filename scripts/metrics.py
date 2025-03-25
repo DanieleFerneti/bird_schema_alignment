@@ -3,8 +3,12 @@ import requests
 import time
 import matplotlib.pyplot as plt
 
+
+
+HOME_DIR = Path.home()
+PATH = HOME_DIR / "Documents/advanced/bird_schema_alignment"
 # Global variable for the file path
-PATH = "/home/daniele/Documents/advanced/bird_schema_alignment"
+#PATH = "/home/daniele/Documents/advanced/bird_schema_alignment"
 
 def load_json(file_path):
     """

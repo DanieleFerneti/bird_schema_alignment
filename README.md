@@ -38,15 +38,39 @@ Il dataset utilizzato è **BIRD-benchmark (Mini-Dev)**, che contiene 500 coppie 
   Queste tre cartelle sono necessarie per il corretto funzionamento del progetto.  
 
 ## Utilizzo
-1. Posizionarsi nella cartella **scripts/**
+1. Posizionarsi nella cartella **bird_schema_alignment/**:
+
+       cd ~/Documents/advanced/bird_schema_alignment
+
+2. Crea l'ambiente virtuale:
+
+       python3 -m venv venv
+
+3. Attivare l'ambiente virtuale:
+       -su Linux/macOS
+          ```bash
+          source venv/bin/activate
+       -su Windows
+          ```bash
+          .\venv\Scripts\activate
+
+   Quando l'ambiente virtuale è attivato, il nome dell'ambiente (di solito venv) apparirà all'inizio della riga del terminale :
+   ```bash
+   (venv) ~/Documents/advanced/bird_schema_alignment$
+
+4. Con l'ambiente virtuale attivato, installa le librerie necessarie con il comando:
+
+       pip install -r requirements.txt
+       
+5.Posizionarsi nella cartella **scripts/**:
 
        cd scripts/
 
-1. Estrarre le tabelle reali con espressioni regolari e predire le tabelle con il LLM:
+6. Estrarre le tabelle reali con espressioni regolari e predire le tabelle con il LLM:
    
        python3 ask_tables.py
    
-2. Calcolare le metriche di valutazione:
+7. Calcolare le metriche di valutazione:
    
        python3 metrics.py
    

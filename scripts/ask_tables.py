@@ -4,8 +4,10 @@ import requests
 import time
 from typing import List
 
+HOME_DIR = Path.home()
+PATH = HOME_DIR / "Documents/advanced/bird_schema_alignment"
 # Global variable for the file path
-PATH = "/home/daniele/Documents/advanced/bird_schema_alignment"
+#PATH = "/home/daniele/Documents/advanced/bird_schema_alignment"
 
 def extract_tables(sql_query: str) -> List[str]:
     """

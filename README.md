@@ -42,15 +42,15 @@ Il dataset utilizzato è **BIRD-benchmark (Mini-Dev)**, che contiene 500 coppie 
 
        cd ~/Documents/advanced/bird_schema_alignment
 
-2. Crea l'ambiente virtuale:
+2. Crea l'**ambiente virtuale**:
 
        python3 -m venv venv
 
-3. Attivare l'ambiente virtuale su Linux/macOS
+3. Attivare l'ambiente virtuale su **Linux/macOS**
 
        source venv/bin/activate
    
-   Attivare l'ambiente virtuale su Windows
+   Attivare l'ambiente virtuale su **Windows**
    
        .\venv\Scripts\activate
 
@@ -58,7 +58,7 @@ Il dataset utilizzato è **BIRD-benchmark (Mini-Dev)**, che contiene 500 coppie 
    ```bash
    (venv) ~/Documents/advanced/bird_schema_alignment$
 
-6. Con l'ambiente virtuale attivato, installa le librerie necessarie con il comando:
+6. Con l'ambiente virtuale attivato, **installa le librerie necessarie** con il comando:
 
        pip install -r requirements.txt
        

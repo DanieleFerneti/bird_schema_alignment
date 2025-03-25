@@ -87,7 +87,7 @@ Le metriche di valutazione globali **(Precision, Recall, F1-score)** sono dispon
 
     results/metrics/evaluation_results.json
 
-Le metriche di valutazione **(Precision, Recall, F1-score)** per ogni **singolo db** sono disponibili in:
+La metrica di valutazione **(F1-score)** per ogni **singolo db** è disponibili in:
 
     results/metrics/f1_per_db.json
 

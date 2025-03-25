@@ -2,7 +2,7 @@ import json
 import requests
 import time
 import matplotlib.pyplot as plt
-
+from pathlib import Path
 
 
 HOME_DIR = Path.home()

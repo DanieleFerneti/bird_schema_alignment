@@ -46,11 +46,10 @@ Il dataset utilizzato è **BIRD-benchmark (Mini-Dev)**, che contiene 500 coppie 
 
        python3 -m venv venv
 
-3. Attivare l'ambiente virtuale:
-3.1 su Linux/macOS
+3.1 Attivare l'ambiente virtuale su Linux/macOS
           ```bash
           source venv/bin/activate
-3.2 su Windows
+3.2 Attivare l'ambiente virtuale su Windows
           ```bash
           .\venv\Scripts\activate
 

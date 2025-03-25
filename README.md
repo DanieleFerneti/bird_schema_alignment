@@ -40,7 +40,7 @@ Il dataset utilizzato è **BIRD-benchmark (Mini-Dev)**, che contiene 500 coppie 
 ## Utilizzo
 1. Mettersi nella cartella scripts
 
-      cd scripts
+       cd scripts/
 
 1. Estrarre le tabelle reali con espressioni regolari e predire le tabelle con il LLM:
    

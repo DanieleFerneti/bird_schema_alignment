@@ -38,17 +38,17 @@ Il dataset utilizzato è **BIRD-benchmark (Mini-Dev)**, che contiene 500 coppie 
   Queste tre cartelle sono necessarie per il corretto funzionamento del progetto.  
 
 ## Utilizzo
-1. Mettersi nella cartella scripts
+1. Posizionarsi nella cartella **scripts/**
 
        cd scripts/
 
 1. Estrarre le tabelle reali con espressioni regolari e predire le tabelle con il LLM:
    
-       python3 scripts/ask_tables.py
+       python3 ask_tables.py
    
 2. Calcolare le metriche di valutazione:
    
-       python3 scripts/metrics.py
+       python3 metrics.py
    
 ## Risultati
 Le tabelle estratte dalle **query SQL** sono salvate in:

@@ -27,10 +27,14 @@ Il dataset utilizzato è **BIRD-benchmark (Mini-Dev)**, che contiene 500 coppie 
    git clone https://github.com/DanieleFerneti/bird_schema_alignment.git
    cd bird_schema_alignment
 3. Prima di iniziare, assicurati che la seguente struttura di cartelle sia presente nel percorso appropriato:
- 
-     Documents/advanced/bird_schema_alignment/ ├── mini_dev/ ├── scripts/ └── results/
-   
-   Queste tre cartelle sono necessarie per il corretto funzionamento del progetto.  
+    
+  ```
+  Documents/advanced/bird_schema_alignment/
+  ├── mini_dev/
+  ├── scripts/
+  └── results/
+  ```
+  Queste tre cartelle sono necessarie per il corretto funzionamento del progetto.  
 
 ## Utilizzo
 1. Estrarre le tabelle reali con espressioni regolari e predire le tabelle con il LLM:

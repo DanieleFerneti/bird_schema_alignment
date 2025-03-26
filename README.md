@@ -14,10 +14,9 @@ The dataset used is **BIRD-benchmark (Mini-Dev)**, which contains 500 pairs of S
   - `ask_tables.py`: Extracts the actual tables from SQL queries and uses an LLM to predict the relevant tables based on natural language questions.
   - `metrics.py`: Computes evaluation metrics (Precision, Recall, F1-score) by comparing the actual tables with the predicted ones.
 - **results/**: 
-  - **tables_extracted/**: Contains JSON files with the tables extracted from SQL and those predicted by the LLM.
-        -ciao 
+  - **tables_extracted/**: Contains JSON files with the tables extracted from SQL and those predicted by the LLM. 
   - **metrics/**: Contains JSON files with evaluation metric results and generated charts.
-  - 
+   
 ## Installation
 1. Create a folder called **advanced**:
     ```bash

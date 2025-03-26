@@ -36,6 +36,14 @@ The dataset used is **BIRD-benchmark (Mini-Dev)**, which contains 500 pairs of S
   └── results/
   ```
   These three folders are necessary for the project to function correctly. 
+  
+## Before Usage
+1. If you do not have an API key for Groq, please consult  [here][https://console.groq.com/keys] to create it.
+2. When it has been created, please execute the following command in your terminal:
+
+     export GROQ_API_KEY=<your-api-key-here>
+
+3. Now, you are ready for the usage !!
 
 ## Usage
 1. Navigate to the **bird_schema_alignment/** folder:

@@ -3,12 +3,18 @@ import requests
 import time
 import matplotlib.pyplot as plt
 from pathlib import Path
-
+import os
+from groq import Groq
 
 HOME_DIR = Path.home()
 PATH = HOME_DIR / "Documents/advanced/bird_schema_alignment"
 # Global variable for the file path
 #PATH = "/home/daniele/Documents/advanced/bird_schema_alignment"
+
+# Initialize the client Groq with the API key of the environment
+client = Groq(
+    api_key=os.environ.get("GROQ_API_KEY"),
+)
 
 def load_json(file_path):
     """
@@ -92,11 +98,16 @@ def call_groq_api_with_retry(prompt, max_retries=3, initial_wait=2):
     Raises:
         Exception: If all retry attempts fail
     """
+    
+    if not api_key:
+        raise ValueError("API Key for Groq is missing. Set GROQ_API_KEY in environment variables.")
+
+
     # API call configuration
     api_url = "https://api.groq.com/openai/v1/chat/completions"
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer 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"
+        "Authorization": "Bearer {api_key}"
     }
     data = {
         "model": "llama-3.3-70b-versatile",
@@ -110,15 +121,18 @@ def call_groq_api_with_retry(prompt, max_retries=3, initial_wait=2):
     wait_time = initial_wait
     for attempt in range(max_retries):
         try:
-            response = requests.post(api_url, headers=headers, json=data)
-            if response.status_code == 200:
-                return response.json()
-            if response.status_code == 429:
-                print(f"Rate limit exceeded. Waiting {wait_time} seconds before retrying...")
-                time.sleep(wait_time)
-                wait_time *= 2  # Exponential backoff
-                continue
-            response.raise_for_status()
+            # Create chat completion using the Groq client
+            chat_completion = client.chat.completions.create(
+                messages=[{
+                    "role": "user",
+                    "content": prompt
+                }],
+                model="llama-3.3-70b-versatile"
+            )
+            
+            # If successful, return the chat completion result
+            return chat_completion.json()
+        
         except Exception as e:
             print(f"Attempt {attempt+1}/{max_retries} failed: {e}")
             if attempt < max_retries - 1:
@@ -128,6 +142,7 @@ def call_groq_api_with_retry(prompt, max_retries=3, initial_wait=2):
             else:
                 print("Maximum number of attempts reached")
                 raise e
+
     raise Exception("All API call attempts failed")
 
 def calculate_metrics_with_llm(real_values, predicted_values):

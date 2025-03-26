@@ -1,32 +1,32 @@
 # BIRD benchmark schema alignment
 
-## Descrizione
-Questo progetto si concentra sull'allineamento tra domande in linguaggio naturale e tabelle di database SQL, verificando la capacità di un LLM di individuare correttamente le tabelle pertinenti. L'analisi viene condotta confrontando le predizioni del modello con le tabelle reali estratte dalle query SQL. L'obiettivo è stato risolvere l'assignment assegnato [**Assignment.pdf**]. Per maggiori informazioni consultare il file [**report_on_the_work_done.pdf**]
+## Description
+This project focuses on the alignment between natural language questions and SQL database tables, verifying the ability of an LLM to correctly identify the relevant tables. The analysis is conducted by comparing the model's predictions with the actual tables extracted from SQL queries. The objective was to complete the assigned task [**Assignment.pdf**]. For more details, refer to the file [**report_on_the_work_done.pdf**].
 
 ## General info
-- **Modello**: Utilizzata l'API gratuita di Groq con il modello LLaMA 3-70B-8192.
+- **Model**: Used the free Groq API with the LLaMA 3-70B-8192 model.
 
 ## Dataset
-Il dataset utilizzato è **BIRD-benchmark (Mini-Dev)**, che contiene 500 coppie di query SQL e domande in linguaggio naturale. [here](https://github.com/bird-bench/mini_dev)
+The dataset used is **BIRD-benchmark (Mini-Dev)**, which contains 500 pairs of SQL queries and natural language questions.[here](https://github.com/bird-bench/mini_dev)
 
-## Struttura del progetto
-- **scripts/**: Contiene gli script principali per l'estrazione delle tabelle e il calcolo delle metriche.
-  - `ask_tables.py`: Estrae le tabelle reali dalle query SQL e utilizza un LLM per predire le tabelle pertinenti basandosi sulle domande in linguaggio naturale.
-  - `metrics.py`: Calcola le metriche di valutazione (Precision, Recall, F1-score) confrontando le tabelle reali e quelle predette.
-- **results/**:
-  - **tables_extracted/**: Contiene i file JSON con le tabelle estratte da SQL e quelle predette dall'LLM.
-  - **metrics/**: Contiene i file JSON con i risultati delle metriche di valutazione e i grafici generati.
-
-## Installazione
-1. Creare una cartella advanced:
+## Project structure
+- **scripts/**: Contains the main scripts for table extraction and metric calculation.
+  - `ask_tables.py`: Extracts the actual tables from SQL queries and uses an LLM to predict the relevant tables based on natural language questions.
+  - `metrics.py`: 
+- **results/**: Computes evaluation metrics (Precision, Recall, F1-score) by comparing the actual tables with the predicted ones.
+  - **tables_extracted/**: Contains JSON files with the tables extracted from SQL and those predicted by the LLM.
+  - **metrics/**: Contains JSON files with evaluation metric results and generated charts.
+  - 
+## Installation
+1. Create a folder called **advanced**:
     ```bash
    mkdir Documents/advanced
    cd Documents/advanced
-2. Clonare la repository:
+2. Clone the repository:
    ```bash
    git clone https://github.com/DanieleFerneti/bird_schema_alignment.git
    cd bird_schema_alignment
-3. Prima di iniziare, assicurati che la seguente struttura di cartelle sia presente nel percorso appropriato:
+3. Before starting, ensure the following folder structure is present in the correct path:
    ```bash
    ls
   ```
@@ -35,69 +35,69 @@ Il dataset utilizzato è **BIRD-benchmark (Mini-Dev)**, che contiene 500 coppie 
   ├── scripts/
   └── results/
   ```
-  Queste tre cartelle sono necessarie per il corretto funzionamento del progetto.  
+  These three folders are necessary for the project to function correctly. 
 
-## Utilizzo
-1. Posizionarsi nella cartella **bird_schema_alignment/**:
+## Usage
+1. Navigate to the **bird_schema_alignment/** folder:
 
        cd ~/Documents/advanced/bird_schema_alignment
 
-2. Crea l'**ambiente virtuale**:
+2. Create the **virtual environment**:
 
        python3 -m venv venv
 
-3. Attivare l'ambiente virtuale su **Linux/macOS**
+3. Activate the virtual environment on **Linux/macOS**:
 
        source venv/bin/activate
    
-   Attivare l'ambiente virtuale su **Windows**
+   Activate the virtual environment on **Windows**:
    
        .\venv\Scripts\activate
 
-   Quando l'ambiente virtuale è attivato, il nome dell'ambiente (di solito venv) apparirà all'inizio della riga del terminale :
+   When the virtual environment is activated, its name (usually venv) will appear at the beginning of the terminal line:
    ```bash
    (venv) ~/Documents/advanced/bird_schema_alignment$
 
-6. Con l'ambiente virtuale attivato, **installa le librerie necessarie** con il comando:
+4. With the virtual environment activated, **install the required libraries** with the command:
 
        pip install -r requirements.txt
        
-5.Posizionarsi nella cartella **scripts/**:
+5.Navigate to the **scripts/** folder:
 
        cd scripts/
 
-6. Estrarre le tabelle reali con espressioni regolari e predire le tabelle con il LLM:
+6. Extract the actual tables using regular expressions and predict the tables with the LLM:
    
        python3 ask_tables.py
    
-7. Calcolare le metriche di valutazione:
+7. Compute the evaluation metrics:
    
        python3 metrics.py
    
-## Risultati
-Le tabelle estratte dalle **query SQL** sono salvate in:
+## Results
+The tables extracted from **SQL queries** are saved in:
 
     results/tables_extracted/output_sql.json
-
-Le predizioni dell'**LLM** sono salvate in:
+    
+The **LLM** predictions are saved in:
 
     results/tables_extracted/output_llm.json
 
-Le metriche di valutazione globali **(Precision, Recall, F1-score)** sono disponibili in:
+The global evaluation metrics **(Precision, Recall, F1-score)** are available in:
 
     results/metrics/evaluation_results.json
 
-La metrica di valutazione **(F1-score)** per ogni **singolo db** è disponibili in:
+The **(F1-score)** evaluation metric for each **individual database** is available in
 
     results/metrics/f1_per_db.json
 
-Il confronto tra metriche calcolate manualmente e quelle dell'LLM è in:
+The comparison between manually computed metrics and those from the LLM is in:
 
     results/metrics/llm_evaluation_results.json
 
-Un grafico delle F1-score per database è salvato in:
+A chart of F1-scores per database is saved in:
 
     results/metrics/f1_final_comparison.png
 
-## Autore
+## Author
 - Daniele Ferneti

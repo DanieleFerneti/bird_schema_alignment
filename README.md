@@ -74,7 +74,7 @@ The dataset used is **BIRD-benchmark (Mini-Dev)**, which contains 500 pairs of S
 
        cd scripts/
 
-6. Extract the actual tables using regular expressions and predict the tables with the LLM:
+6. Extract the actual tables using regular expressions and predict the tables with the LLM (around 16 minutes) :
    
        python3 ask_tables.py
    
